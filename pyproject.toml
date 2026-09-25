@@ -1,0 +1,12 @@
+[project]
+name = "observatorio-latam"
+version = "2026.9.0"
+description = "Observatorio de Desarrollo Socio-Económico y Ambiental de América Latina y el Caribe (ADR-001, ADR-002, ADR-003)"
+requires-python = ">=3.10"
+dependencies = [
+    "pyyaml>=6.0.1",
+    "requests>=2.31.0",
+]
+
+[tool.vercel]
+entrypoint = "server:app"

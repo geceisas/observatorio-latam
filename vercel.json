@@ -1,23 +1,5 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/api/chat",
-      "destination": "/api/chat.py"
-    },
-    {
-      "source": "/portal.css",
-      "destination": "/web/portal/portal.css"
-    },
-    {
-      "source": "/portal.js",
-      "destination": "/web/portal/portal.js"
-    },
-    {
-      "source": "/",
-      "destination": "/web/portal/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/data/public/(.*)",

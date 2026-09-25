@@ -432,9 +432,122 @@ def run_test_mode(host: str = "127.0.0.1", port: int = 8999) -> int:
         server.server_close()
 
 
+# =========================================================================
+# Vercel Python Runtime Exports (handler + WSGI app / application)
+# =========================================================================
+handler = ObservatorioHandler
+
+
+def app(environ: dict, start_response):
+    """
+    Standard WSGI application entrypoint for Vercel (`server:app`).
+    Routes static portal assets (`/`, `/portal.js`, `/portal.css`, `/data/public/*`)
+    and the verified agentic chat API (`POST /api/chat`).
+    """
+    method = environ.get("REQUEST_METHOD", "GET").upper()
+    raw_path = environ.get("PATH_INFO", "/") or "/"
+    clean_path = urllib.parse.unquote(raw_path)
+
+    cors_headers = [
+        ("Access-Control-Allow-Origin", "*"),
+        ("Access-Control-Allow-Methods", "GET, POST, OPTIONS, HEAD"),
+        ("Access-Control-Allow-Headers", "Content-Type, Authorization, X-Requested-With"),
+    ]
+
+    if method == "OPTIONS":
+        start_response("200 OK", cors_headers + [("Content-Length", "0")])
+        return [b""]
+
+    if clean_path.rstrip("/") == "/api/chat":
+        if method == "GET":
+            store = get_store()
+            body = json.dumps(
+                {
+                    "status": "ok",
+                    "service": "Observatorio LATAM Chat API (ADR-003)",
+                    "snapshot_id": store.manifest.get("snapshot_id", "2026-09"),
+                    "tools": ["buscar_indicador", "obtener_serie", "comparar", "ranking", "crear_grafico"],
+                },
+                ensure_ascii=False,
+            ).encode("utf-8")
+            start_response(
+                "200 OK",
+                cors_headers + [("Content-Type", "application/json; charset=utf-8"), ("Content-Length", str(len(body)))],
+            )
+            return [body]
+
+        if method == "POST":
+            try:
+                content_length = int(environ.get("CONTENT_LENGTH") or 0)
+            except ValueError:
+                content_length = 0
+            wsgi_input = environ.get("wsgi.input")
+            raw_body = wsgi_input.read(content_length).decode("utf-8") if (wsgi_input and content_length > 0) else "{}"
+            try:
+                payload = json.loads(raw_body) if raw_body.strip() else {}
+            except Exception:
+                start_response("400 Bad Request", cors_headers + [("Content-Type", "application/json")])
+                return [b'{"error": "Invalid JSON"}']
+
+            question = ""
+            if isinstance(payload, dict):
+                for k in ("question", "prompt", "message", "q", "query"):
+                    if k in payload and isinstance(payload[k], str):
+                        question = payload[k].strip()
+                        break
+            if not question:
+                start_response("400 Bad Request", cors_headers + [("Content-Type", "application/json")])
+                return [b'{"error": "Missing question field"}']
+
+            result = answer_question(question, store=get_store())
+            body = json.dumps(result, ensure_ascii=False).encode("utf-8")
+            start_response(
+                "200 OK",
+                cors_headers + [("Content-Type", "application/json; charset=utf-8"), ("Content-Length", str(len(body)))],
+            )
+            return [body]
+
+    # Static file resolution for /, /portal.js, /portal.css, /web/portal/*, /data/public/*
+    target_file: Optional[Path] = None
+    if clean_path in ("/", "", "/index.html"):
+        target_file = WEB_PORTAL_DIR / "index.html"
+    elif clean_path.startswith("/data/public/"):
+        rel = clean_path[len("/data/public/"):]
+        cand = (DATA_PUBLIC_DIR / rel).resolve()
+        if is_safe_subpath(cand, DATA_PUBLIC_DIR) and cand.is_file():
+            target_file = cand
+    elif clean_path.startswith("/web/portal/"):
+        rel = clean_path[len("/web/portal/"):]
+        cand = (WEB_PORTAL_DIR / rel).resolve()
+        if is_safe_subpath(cand, WEB_PORTAL_DIR) and cand.is_file():
+            target_file = cand
+    else:
+        rel = clean_path.lstrip("/")
+        cand = (WEB_PORTAL_DIR / rel).resolve()
+        if is_safe_subpath(cand, WEB_PORTAL_DIR) and cand.is_file():
+            target_file = cand
+
+    if target_file and target_file.is_file():
+        content = target_file.read_bytes()
+        guessed_type, _ = mimetypes.guess_type(str(target_file))
+        mime = guessed_type or "application/octet-stream"
+        if mime.startswith("text/") or mime in ("application/json", "application/javascript"):
+            mime = f"{mime}; charset=utf-8"
+        start_response("200 OK", cors_headers + [("Content-Type", mime), ("Content-Length", str(len(content)))])
+        return [content if method != "HEAD" else b""]
+
+    not_found = json.dumps({"error": "Not Found", "path": clean_path}).encode("utf-8")
+    start_response("404 Not Found", cors_headers + [("Content-Type", "application/json"), ("Content-Length", str(len(not_found)))])
+    return [not_found]
+
+
+application = app
+
+
 if __name__ == "__main__":
     bind_host, bind_port, is_test = parse_arguments()
     if is_test:
         sys.exit(run_test_mode(bind_host, bind_port if bind_port != 8000 else 8999))
     else:
         run_server(bind_host, bind_port)
+
