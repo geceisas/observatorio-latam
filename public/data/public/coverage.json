@@ -1,0 +1,2185 @@
+{
+  "status": "PASSED",
+  "total_observations": 5257,
+  "range_violations_count": 0,
+  "range_violations": [],
+  "sudden_jumps_count": 0,
+  "sudden_jumps": [],
+  "coverage_matrix": [
+    {
+      "indicator": "EN.GHG.CO2.PC.CE.AR5",
+      "name": "CO2 per cápita",
+      "dimension": "ambiental",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "EG.FEC.RNEW.ZS",
+      "name": "Energía renovable (% consumo final)",
+      "dimension": "ambiental",
+      "overall_coverage_pct": 86.7,
+      "by_country": {
+        "COL": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 13,
+          "coverage_pct": 86.7,
+          "latest_year": 2022,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 0,
+        "2024": 0
+      }
+    },
+    {
+      "indicator": "AG.LND.FRST.ZS",
+      "name": "Cobertura forestal",
+      "dimension": "ambiental",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "EG.ELC.RNEW.ZS",
+      "name": "Electricidad renovable",
+      "dimension": "ambiental",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "CEPAL.POV.HARM",
+      "name": "Pobreza armonizada CEPAL",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SI.POV.NAHC",
+      "name": "Pobreza (línea nacional propia)",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SI.POV.GINI",
+      "name": "Coeficiente de Gini",
+      "dimension": "social",
+      "overall_coverage_pct": 88.3,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 8,
+          "coverage_pct": 53.3,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 8,
+          "coverage_pct": 53.3,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 8,
+          "coverage_pct": 53.3,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 8,
+          "coverage_pct": 53.3,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 8,
+          "coverage_pct": 53.3,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 15,
+        "2012": 20,
+        "2013": 15,
+        "2014": 20,
+        "2015": 15,
+        "2016": 20,
+        "2017": 15,
+        "2018": 20,
+        "2019": 15,
+        "2020": 20,
+        "2021": 15,
+        "2022": 20,
+        "2023": 15,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SH.XPD.CHEX.PP.CD",
+      "name": "Gasto en salud per cápita (PPA)",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SE.SEC.NENR",
+      "name": "Matrícula neta secundaria",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SL.TLF.CACT.FM.ZS",
+      "name": "Paridad laboral mujer/hombre",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SP.DYN.LE00.IN",
+      "name": "Esperanza de vida",
+      "dimension": "social",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "NY.GDP.PCAP.PP.KD",
+      "name": "PIB per cápita (PPA cte.)",
+      "dimension": "economica",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "SL.UEM.TOTL.ZS",
+      "name": "Desempleo total",
+      "dimension": "economica",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "FP.CPI.TOTL.ZG",
+      "name": "Inflación anual (IPC)",
+      "dimension": "economica",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    },
+    {
+      "indicator": "NE.GDI.TOTL.ZS",
+      "name": "Inversión / Formación de capital",
+      "dimension": "economica",
+      "overall_coverage_pct": 100.0,
+      "by_country": {
+        "COL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CHL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CRI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BRA": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "MEX": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ARG": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PER": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "URY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "ECU": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PAN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "DOM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "BOL": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "PRY": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "GTM": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HND": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "SLV": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "NIC": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "VEN": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "CUB": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        },
+        "HTI": {
+          "years_count": 15,
+          "coverage_pct": 100.0,
+          "latest_year": 2024,
+          "first_year": 2010
+        }
+      },
+      "n_by_year": {
+        "2010": 20,
+        "2011": 20,
+        "2012": 20,
+        "2013": 20,
+        "2014": 20,
+        "2015": 20,
+        "2016": 20,
+        "2017": 20,
+        "2018": 20,
+        "2019": 20,
+        "2020": 20,
+        "2021": 20,
+        "2022": 20,
+        "2023": 20,
+        "2024": 20
+      }
+    }
+  ]
+}

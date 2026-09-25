@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Observatorio LATAM — Plataforma de Desarrollo Socio-Económico y Ambiental</title>
+  <meta name="description" content="Observatorio de desarrollo económico, social y ambiental de América Latina y el Caribe. Datos comparables, metodologías auditadas (ADR-001) y snapshot versionado.">
+  <link rel="stylesheet" href="portal.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Header & Global Navigation
+       ========================================================================= -->
+  <header class="app-header" role="banner">
+    <div class="header-top">
+      <div class="brand-wrap">
+        <div class="brand-logo" aria-hidden="true">OL</div>
+        <div>
+          <h1 class="brand-title">
+            <span data-i18n="appName">Observatorio LATAM</span>
+            <span class="brand-badge">2026-09</span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <div class="meta-pill" id="header-snapshot-id">
+          <span class="status-dot"></span>
+          <span>Snapshot: 2026-09 · DOI: 10.5281/zenodo.obs-latam-2026-09</span>
+        </div>
+
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Cambiar tema claro u oscuro">
+          ☀️ Claro
+        </button>
+
+        <div class="lang-selector" role="group" aria-label="Selector de idioma">
+          <button class="lang-btn active" data-lang="es" aria-label="Español">ES</button>
+          <button class="lang-btn" data-lang="pt" aria-label="Português">PT</button>
+          <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="nav-bar" role="navigation" aria-label="Navegación principal">
+      <div class="nav-container">
+        <a href="#portada" class="nav-link active" data-view="portada">
+          <span class="nav-icon" aria-hidden="true">🏠</span>
+          <span data-i18n="navPortada">Portada</span>
+        </a>
+        <a href="#comparador" class="nav-link" data-view="comparador">
+          <span class="nav-icon" aria-hidden="true">📊</span>
+          <span data-i18n="navComparador">Comparador</span>
+        </a>
+        <a href="#perfiles" class="nav-link" data-view="perfiles">
+          <span class="nav-icon" aria-hidden="true">🌎</span>
+          <span data-i18n="navPerfiles">Perfiles de País</span>
+        </a>
+        <a href="#visualizaciones" class="nav-link" data-view="visualizaciones">
+          <span class="nav-icon" aria-hidden="true">📈</span>
+          <span data-i18n="navVisualizaciones">8 Visualizaciones</span>
+        </a>
+        <a href="#historias" class="nav-link" data-view="historias">
+          <span class="nav-icon" aria-hidden="true">📖</span>
+          <span data-i18n="navHistorias">Historias</span>
+        </a>
+        <a href="#chat" class="nav-link" data-view="chat">
+          <span class="nav-icon" aria-hidden="true">💬</span>
+          <span data-i18n="navChat">Pregunta / Chat</span>
+        </a>
+        <a href="#metodologia" class="nav-link" data-view="metodologia">
+          <span class="nav-icon" aria-hidden="true">📑</span>
+          <span data-i18n="navMetodologia">Metodología & DOI</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       Main Content (7 SPA Views)
+       ========================================================================= -->
+  <main class="main-content" role="main">
+
+    <!-- View 1: Portada (Overview & Pulse Cards) -->
+    <section id="view-portada" class="view-section active" aria-labelledby="view-portada-title">
+      <!-- Injected via portal.js renderPortada() -->
+      <div class="loading-state">Cargando indicadores prioritarios...</div>
+    </section>
+
+    <!-- View 2: Comparador (Interactive Explorer) -->
+    <section id="view-comparador" class="view-section" aria-labelledby="view-comparador-title">
+      <!-- Injected via portal.js renderComparador() -->
+      <div class="loading-state">Inicializando comparador interactivo...</div>
+    </section>
+
+    <!-- View 3: Perfiles de País (Country Dimensions) -->
+    <section id="view-perfiles" class="view-section" aria-labelledby="view-perfiles-title">
+      <!-- Injected via portal.js renderPerfiles() -->
+      <div class="loading-state">Cargando perfiles nacionales...</div>
+    </section>
+
+    <!-- View 4: 8 Visualizaciones Especializadas -->
+    <section id="view-visualizaciones" class="view-section" aria-labelledby="view-visualizaciones-title">
+      <!-- Injected via portal.js renderVisualizaciones() -->
+      <div class="loading-state">Cargando visualizaciones avanzadas...</div>
+    </section>
+
+    <!-- View 5: Historias Scrollytelling (Martini Glass) -->
+    <section id="view-historias" class="view-section" aria-labelledby="view-historias-title">
+      <!-- Injected via portal.js renderHistorias() -->
+      <div class="loading-state">Cargando historias interactivas...</div>
+    </section>
+
+    <!-- View 6: Pregunta / Chat UI (Agentic Chatbot) -->
+    <section id="view-chat" class="view-section" aria-labelledby="view-chat-title">
+      <!-- Injected via portal.js renderChat() -->
+      <div class="loading-state">Conectando al agente analítico...</div>
+    </section>
+
+    <!-- View 7: Metodología / DOI (Zenodo & ADR-001) -->
+    <section id="view-metodologia" class="view-section" aria-labelledby="view-metodologia-title">
+      <!-- Injected via portal.js renderMetodologia() -->
+      <div class="loading-state">Cargando documentación metodológica...</div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="footer-container">
+      <div>
+        <strong>Observatorio LATAM</strong> · Snapshot mensual <code>2026-09</code>
+        <div style="font-size:0.75rem; margin-top:0.25rem;">
+          5 países prioritarios (COL, CHL, CRI, BRA, MEX) · 15 países regionales · 15 indicadores auditados
+        </div>
+      </div>
+      <div>
+        <a href="https://doi.org/10.5281/zenodo.obs-latam-2026-09" target="_blank" rel="noopener noreferrer" class="meta-pill" style="text-decoration:none;">
+          DOI: 10.5281/zenodo.obs-latam-2026-09
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script src="portal.js"></script>
+</body>
+</html>

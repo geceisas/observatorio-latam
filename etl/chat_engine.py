@@ -27,16 +27,24 @@ PUBLIC_DIR = ROOT_DIR / "data" / "public"
 
 class SnapshotStore:
     def __init__(self) -> None:
-        with open(PUBLIC_DIR / "catalog.json", "r", encoding="utf-8") as f:
-            self.catalog = json.load(f)
-        with open(PUBLIC_DIR / "countries.json", "r", encoding="utf-8") as f:
-            self.countries_doc = json.load(f)
-        with open(PUBLIC_DIR / "all_observations.json", "r", encoding="utf-8") as f:
-            self.observations = json.load(f)
-        with open(PUBLIC_DIR / "insights.json", "r", encoding="utf-8") as f:
-            self.insights = json.load(f)
-        with open(PUBLIC_DIR / "manifest.json", "r", encoding="utf-8") as f:
-            self.manifest = json.load(f)
+        if (PUBLIC_DIR / "catalog.json").is_file():
+            with open(PUBLIC_DIR / "catalog.json", "r", encoding="utf-8") as f:
+                self.catalog = json.load(f)
+            with open(PUBLIC_DIR / "countries.json", "r", encoding="utf-8") as f:
+                self.countries_doc = json.load(f)
+            with open(PUBLIC_DIR / "all_observations.json", "r", encoding="utf-8") as f:
+                self.observations = json.load(f)
+            with open(PUBLIC_DIR / "insights.json", "r", encoding="utf-8") as f:
+                self.insights = json.load(f)
+            with open(PUBLIC_DIR / "manifest.json", "r", encoding="utf-8") as f:
+                self.manifest = json.load(f)
+        else:
+            from etl.snapshot_bundle import SNAPSHOT_FILES
+            self.catalog = SNAPSHOT_FILES["catalog"]
+            self.countries_doc = SNAPSHOT_FILES["countries"]
+            self.observations = SNAPSHOT_FILES["all_observations"]
+            self.insights = SNAPSHOT_FILES["insights"]
+            self.manifest = SNAPSHOT_FILES["manifest"]
 
         self.indicators: Dict[str, Dict[str, Any]] = {
             ind["code"]: ind for ind in self.catalog["indicators"]
