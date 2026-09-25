@@ -1,0 +1,20 @@
+{
+  "snapshot_id": "2026-09",
+  "version": "2026.09",
+  "generated_at": "2026-09-25T07:23:37Z",
+  "zenodo_doi": "10.5281/zenodo.obs-latam-2026-09",
+  "citation_apa": "Observatorio LATAM (2026). Snapshot mensual de desarrollo económico, social y ambiental de América Latina y el Caribe (Versión 2026-09) [Conjunto de datos]. Zenodo. https://doi.org/10.5281/zenodo.obs-latam-2026-09",
+  "total_observations": 5257,
+  "live_api_rows_merged": 180,
+  "indicators_count": 15,
+  "countries_count": 20,
+  "aggregates": [
+    "LATAM_AVG",
+    "LCN",
+    "OED",
+    "WLD"
+  ],
+  "sha256_observations_csv": "f10a935002d0312ae8112805e83faaf1cd98006ce9e797887eaf35dc8fabbd5e",
+  "validation_status": "PASSED",
+  "range_violations_count": 0
+}

@@ -1,0 +1,36 @@
+---
+title: "¿Logró Costa Rica crecer mientras recuperaba su bosque y descarbonizaba su electricidad?"
+slug: "costa-rica-desacoplamiento"
+dimension: "ambiental"
+structure: "martini-glass"
+comparator_state: "?indicator=NY.GDP.PCAP.PP.KD&y=EN.GHG.CO2.PC.CE.AR5&countries=CRI,CHL,COL,BRA,MEX&ref=LATAM_AVG&view=scatter"
+---
+
+<StoryStep
+  step={1}
+  title="Paso 1 · El punto de partida regional (2010)"
+  chartTransform={{ highlight: ["LATAM_AVG", "LCN"], mode: "connected_scatter", x: "NY.GDP.PCAP.PP.KD", y: "EN.GHG.CO2.PC.CE.AR5" }}
+>
+  En la mayoría de las economías emergentes, cada salto en el PIB per cápita (PPA) ha venido acompañado de mayores emisiones de CO2 per cápita (`EN.GHG.CO2.PC.CE.AR5`, serie EDGAR AR5). En 2010, América Latina promediaba **2.21 t CO2e/hab** (promedio simple `n=20`) y **2.68 t CO2e/hab** en el agregado ponderado `LCN`.
+</StoryStep>
+
+<StoryStep
+  step={2}
+  title="Paso 2 · La trayectoria de Costa Rica: +52.2% en PIB per cápita sin elevar emisiones"
+  chartTransform={{ highlight: ["CRI"], annotateYear: 2020, showForestOverlay: true }}
+>
+  Entre **2010 y 2024**, el PIB per cápita PPA de **Costa Rica (`CRI`)** creció de **$16,980** a **$25,840** (**+52.2%**). Al mismo tiempo, sus emisiones per cápita se mantuvieron estables e incluso descendieron levemente de **1.55** a **1.52 t CO2e/hab**, mientras su cobertura forestal (`AG.LND.FRST.ZS`) subió de **56.1%** a **60.4%** del territorio nacional.
+</StoryStep>
+
+<StoryStep
+  step={3}
+  title="Paso 3 · Contraste con Chile y México: matriz eléctrica vs. transporte"
+  chartTransform={{ highlight: ["CRI", "CHL", "MEX", "COL", "BRA"], mode: "slope_renewable" }}
+>
+  Mientras **Costa Rica** genera el **98.6%** de su electricidad con fuentes renovables (`EG.ELC.RNEW.ZS`) y **Chile (`CHL`)** protagonizó el mayor salto estructural de la región (de **37.4%** en 2010 a **68.2%** en 2024, **+30.8 puntos**), el reto pendiente está en el consumo final total (`EG.FEC.RNEW.ZS`, 38.9% en CRI por el peso del transporte terrestre).
+</StoryStep>
+
+<ExploreAction
+  label="Explóralo tú en el Comparador"
+  url="?indicator=NY.GDP.PCAP.PP.KD&y=EN.GHG.CO2.PC.CE.AR5&countries=CRI,CHL,COL,BRA,MEX&ref=LATAM_AVG&view=scatter"
+/>

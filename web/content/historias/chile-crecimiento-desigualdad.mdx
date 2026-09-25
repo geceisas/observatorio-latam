@@ -1,0 +1,36 @@
+---
+title: "¿Por qué el crecimiento de Chile y el dinamismo de Colombia aún enfrentan altos pisos de desigualdad?"
+slug: "chile-crecimiento-desigualdad"
+dimension: "social"
+structure: "martini-glass"
+comparator_state: "?indicator=SI.POV.GINI&y=NY.GDP.PCAP.PP.KD&countries=CHL,COL,BRA,CRI,MEX&ref=LATAM_AVG&view=scatter"
+---
+
+<StoryStep
+  step={1}
+  title="Paso 1 · Cuadrantes de cambio: Δ PIB per cápita vs. Δ Coeficiente de Gini"
+  chartTransform={{ highlight: ["CHL", "COL", "BRA", "MEX", "CRI"], mode: "quadrant_change" }}
+>
+  Al cruzar el crecimiento acumulado del PIB per cápita PPA (`NY.GDP.PCAP.PP.KD`, 2010–2024) contra la variación del **Coeficiente de Gini (`SI.POV.GINI`)**, la región se divide en cuatro cuadrantes: países que crecieron reduciendo desigualdad y países donde el ingreso per cápita avanzó pero la concentración permaneció sobre los 46 puntos.
+</StoryStep>
+
+<StoryStep
+  step={2}
+  title="Paso 2 · Chile: caída de la pobreza armonizada al 11.2% pero Gini aún lejos de la OCDE"
+  chartTransform={{ highlight: ["CHL", "OED", "LATAM_AVG"], mode: "gini_vs_poverty" }}
+>
+  **Chile (`CHL`)** alcanzó un PIB per cápita PPA de **$29,650** en 2024 y redujo su tasa de pobreza armonizada de CEPAL (`CEPAL.POV.HARM`) de **19.4%** (2010) a **11.2%** (2024). Sin embargo, su coeficiente de Gini (**43.0 puntos**) sigue **+10.9 puntos** por encima del promedio de la **OCDE (`OED`: 32.1 puntos)**.
+</StoryStep>
+
+<StoryStep
+  step={3}
+  title="Paso 3 · Colombia y Brasil: las mayores brechas frente al promedio regional"
+  chartTransform={{ highlight: ["COL", "BRA", "LATAM_AVG"], mode: "diverging_gap" }}
+>
+  **Colombia (`COL`: 53.9 puntos)** y **Brasil (`BRA`: 51.8 puntos)** encabezan la desigualdad regional, superando tanto al promedio simple LATAM (**45.1 puntos**, `n=20`) como al agregado `LCN` (**46.5 puntos**).
+</StoryStep>
+
+<ExploreAction
+  label="Explóralo tú en el Comparador"
+  url="?indicator=SI.POV.GINI&countries=CHL,COL,BRA,CRI,MEX&ref=LATAM_AVG&view=lines"
+/>

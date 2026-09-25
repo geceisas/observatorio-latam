@@ -1,0 +1,403 @@
+# Catálogo Oficial de Indicadores - Observatorio LATAM (Fuente Única de Verdad)
+# Este archivo alimenta tanto el pipeline ETL (Python) como el contexto completo del Chat (/api/chat)
+# e incluye todos los ajustes metodológicos aprobados en ADR-001.
+
+version: "2026.09"
+year_range:
+  start: 2010
+  end: 2025
+
+dimensions:
+  - slug: economica
+    name:
+      es: Dimensión Económica
+      pt: Dimensão Econômica
+      en: Economic Dimension
+    description:
+      es: Crecimiento productivo, paridad de poder adquisitivo, estabilidad de precios, inversión y mercado laboral.
+      pt: Crescimento produtivo, paridade de poder de compra, estabilidade de preços, investimento e mercado de trabalho.
+      en: Productive growth, purchasing power parity, price stability, investment, and labor market.
+
+  - slug: social
+    name:
+      es: Dimensión Social
+      pt: Dimensão Social
+      en: Social Dimension
+    description:
+      es: Distribución del ingreso, pobreza armonizada, equidad de género laboral, salud en PPA y educación neta.
+      pt: Distribuição de renda, pobreza harmonizada, equidade de gênero no trabalho, saúde em PPC e educação líquida.
+      en: Income distribution, harmonized poverty, labor gender equity, PPP health expenditure, and net education.
+
+  - slug: ambiental
+    name:
+      es: Dimensión Ambiental
+      pt: Dimensão Ambiental
+      en: Environmental Dimension
+    description:
+      es: Emisiones de CO2 per cápita (EDGAR AR5), transición hacia energías renovables, matriz eléctrica y cobertura forestal.
+      pt: Emissões de CO2 per capita (EDGAR AR5), transição para energias renováveis, matriz elétrica e cobertura florestal.
+      en: CO2 emissions per capita (EDGAR AR5), renewable energy transition, clean power matrix, and forest cover.
+
+indicators:
+  # ==========================================
+  # DIMENSIÓN AMBIENTAL (con ajustes ADR-001)
+  # ==========================================
+  - code: EN.GHG.CO2.PC.CE.AR5
+    replaces_code: EN.ATM.CO2E.PC
+    dimension: ambiental
+    source: World Bank / EDGAR JRC
+    source_api: worldbank
+    wb_code: EN.GHG.CO2.PC.CE.AR5
+    name:
+      es: Emisiones de CO2 per cápita (EDGAR AR5, sin LULUCF)
+      pt: Emissões de CO2 per capita (EDGAR AR5, sem LULUCF)
+      en: CO2 emissions per capita (EDGAR AR5, excl. LULUCF)
+    short_name:
+      es: CO2 per cápita
+      pt: CO2 per capita
+      en: CO2 per capita
+    unit: "t CO2e / hab."
+    decimals: 2
+    higher_is_better: false
+    composite_default_weight: 0.15
+    sdg_target: "ODS 13.2"
+    valid_range: [0.05, 30.0]
+    methodology_note: >
+      Reemplaza a EN.ATM.CO2E.PC (descontinuado por el Banco Mundial). La serie nueva proviene de la base EDGAR
+      del Centro Común de Investigación (JRC) de la Comisión Europea, excluye el cambio de uso del suelo y silvicultura
+      (LULUCF) y utiliza los potenciales de calentamiento global del Quinto Informe de Evaluación (AR5) del IPCC.
+      Sus valores no empatan exactamente con la serie histórica anterior.
+
+  - code: EG.FEC.RNEW.ZS
+    dimension: ambiental
+    source: World Bank / IEA / IRENA
+    source_api: worldbank
+    wb_code: EG.FEC.RNEW.ZS
+    name:
+      es: Participación de energías renovables en el consumo final de energía
+      pt: Participação de energias renováveis no consumo final de energia
+      en: Renewable energy share in total final energy consumption
+    short_name:
+      es: Energía renovable (% consumo final)
+      pt: Energia renovável (% consumo final)
+      en: Renewable energy (% final consumption)
+    unit: "%"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.12
+    sdg_target: "ODS 7.2"
+    valid_range: [0.0, 100.0]
+    lag_warning: true
+    methodology_note: >
+      Mide la proporción de energía renovable en el consumo final total (electricidad, transporte y calor).
+      Se publica con 2 a 3 años de rezago en las estadísticas internacionales; el portal muestra siempre explícitamente
+      el último año disponible de cada país.
+
+  - code: AG.LND.FRST.ZS
+    dimension: ambiental
+    source: World Bank / FAO FRA
+    source_api: worldbank
+    wb_code: AG.LND.FRST.ZS
+    name:
+      es: Superficie forestal (% de la superficie terrestre)
+      pt: Área florestal (% da área terrestre)
+      en: Forest area (% of land area)
+    short_name:
+      es: Cobertura forestal
+      pt: Cobertura florestal
+      en: Forest cover
+    unit: "%"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.10
+    sdg_target: "ODS 15.1"
+    valid_range: [0.0, 95.0]
+    methodology_note: >
+      Porcentaje de tierra bajo rodales naturales o plantados de árboles de al menos 5 metros in situ (FAO).
+      Indicador central para evaluar la recuperación de bosque en Costa Rica y presiones de deforestación amazónica.
+
+  - code: EG.ELC.RNEW.ZS
+    dimension: ambiental
+    source: World Bank / IEA / OLADE
+    source_api: worldbank
+    wb_code: EG.ELC.RNEW.ZS
+    name:
+      es: Electricidad generada a partir de fuentes renovables (% del total)
+      pt: Eletricidade gerada a partir de fontes renováveis (% do total)
+      en: Renewable electricity output (% of total electricity output)
+    short_name:
+      es: Electricidad renovable
+      pt: Eletricidade renovável
+      en: Renewable electricity
+    unit: "%"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.08
+    sdg_target: "ODS 7.2"
+    valid_range: [0.0, 100.0]
+    methodology_note: >
+      Proporción de la generación eléctrica total proveniente de fuentes hidroeléctrica, solar, eólica, geotérmica y biomasa.
+
+  # ==========================================
+  # DIMENSIÓN SOCIAL (con ajustes ADR-001)
+  # ==========================================
+  - code: CEPAL.POV.HARM
+    replaces_code: SI.POV.NAHC
+    dimension: social
+    source: CEPALSTAT (Comisión Económica para América Latina y el Caribe)
+    source_api: cepalstat
+    cepal_indicator_id: "2188"
+    wb_fallback_code: SI.POV.UMIC
+    name:
+      es: Tasa de pobreza monetaria armonizada (metodología comparable CEPAL)
+      pt: Taxa de pobreza monetária harmonizada (metodologia comparável CEPAL)
+      en: Harmonized monetary poverty rate (ECLAC comparable methodology)
+    short_name:
+      es: Pobreza armonizada CEPAL
+      pt: Pobreza harmonizada CEPAL
+      en: Harmonized poverty (ECLAC)
+    unit: "% de la población"
+    decimals: 1
+    higher_is_better: false
+    composite_default_weight: 0.12
+    sdg_target: "ODS 1.2"
+    valid_range: [0.0, 85.0]
+    methodology_note: >
+      Ajuste ADR-001: SI.POV.NAHC utiliza la línea nacional de cada país y NO es comparable internacionalmente.
+      Para comparaciones regionales se utiliza la serie armonizada de CEPALSTAT basada en canastas básicas comparables.
+      La serie nacional (SI.POV.NAHC) se reserva exclusivamente para la vista individual del perfil de cada país.
+
+  - code: SI.POV.NAHC
+    dimension: social
+    source: World Bank / Institutos Nacionales de Estadística (DANE, INE, IBGE, INEC)
+    source_api: worldbank
+    wb_code: SI.POV.NAHC
+    profile_only: true
+    name:
+      es: Tasa de pobreza según línea nacional oficial (no comparable entre países)
+      pt: Taxa de pobreza segundo a linha nacional oficial (não comparável entre países)
+      en: Poverty headcount ratio at national poverty lines (non-comparable across countries)
+    short_name:
+      es: Pobreza (línea nacional propia)
+      pt: Pobreza (linha nacional própria)
+      en: National poverty line
+    unit: "% de la población"
+    decimals: 1
+    higher_is_better: false
+    composite_default_weight: 0.0
+    sdg_target: "ODS 1.2"
+    valid_range: [0.0, 90.0]
+    methodology_note: >
+      ADVERTENCIA METODOLÓGICA: Cada instituto nacional define su propia canasta y umbral de pobreza.
+      Este indicador solo debe leerse como evolución interna de cada país en su perfil individual; nunca para rankings entre países.
+
+  - code: SI.POV.GINI
+    dimension: social
+    source: World Bank PIP / complementado con CEPALSTAT
+    source_api: worldbank_cepal_hybrid
+    wb_code: SI.POV.GINI
+    cepal_indicator_id: "3289"
+    name:
+      es: Índice de Gini de desigualdad del ingreso
+      pt: Índice de Gini de desigualdade de renda
+      en: Gini income inequality index
+    short_name:
+      es: Coeficiente de Gini
+      pt: Coeficiente de Gini
+      en: Gini coefficient
+    unit: "puntos (0-100)"
+    decimals: 1
+    higher_is_better: false
+    composite_default_weight: 0.12
+    sdg_target: "ODS 10.1"
+    valid_range: [20.0, 70.0]
+    show_exact_year: true
+    methodology_note: >
+      Mide la desviación de la distribución del ingreso respecto a una distribución perfectamente igualitaria (0 = igualdad total, 100 = desigualdad máxima).
+      Dado que no todos los países levantan encuestas de hogares todos los años, cada punto muestra explícitamente el año exacto de medición y se complementa con CEPALSTAT.
+
+  - code: SH.XPD.CHEX.PP.CD
+    replaces_code: SH.XPD.CHEX.PC.CD
+    dimension: social
+    source: World Bank / OMS (Global Health Expenditure Database)
+    source_api: worldbank
+    wb_code: SH.XPD.CHEX.PP.CD
+    name:
+      es: Gasto corriente en salud per cápita, PPA ($ internacionales actuales)
+      pt: Despesa corrente em saúde per capita, PPC ($ internacionais atuais)
+      en: Current health expenditure per capita, PPP (current international $)
+    short_name:
+      es: Gasto en salud per cápita (PPA)
+      pt: Gasto em saúde per capita (PPC)
+      en: Health expenditure per capita (PPP)
+    unit: "$ int. PPA"
+    decimals: 0
+    higher_is_better: true
+    composite_default_weight: 0.08
+    sdg_target: "ODS 3.8"
+    valid_range: [50.0, 15000.0]
+    methodology_note: >
+      Ajuste ADR-001: Reemplaza a SH.XPD.CHEX.PC.CD (en dólares corrientes) para eliminar las distorsiones bruscas del tipo de cambio nominal
+      y reflejar la capacidad real de compra de bienes y servicios médicos en cada país.
+
+  - code: SE.SEC.NENR
+    replaces_code: SE.SEC.ENRR
+    dimension: social
+    source: World Bank / UNESCO UIS
+    source_api: worldbank
+    wb_code: SE.SEC.NENR
+    name:
+      es: Tasa neta de matrícula en educación secundaria
+      pt: Taxa líquida de matrícula no ensino secundário
+      en: Net secondary school enrollment rate
+    short_name:
+      es: Matrícula neta secundaria
+      pt: Matrícula líquida secundária
+      en: Net secondary enrollment
+    unit: "% edad teórica"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.08
+    sdg_target: "ODS 4.1"
+    valid_range: [20.0, 100.0]
+    methodology_note: >
+      Ajuste ADR-001: Reemplaza a la tasa bruta (SE.SEC.ENRR), la cual puede superar el 100% por sobreedad o repitencia.
+      La tasa neta acota estrictamente el rango entre 0% y 100% de la población en edad oficial de cursar secundaria.
+
+  - code: SL.TLF.CACT.FM.ZS
+    replaces_code: SL.TLF.CACT.FE.ZS
+    dimension: social
+    source: World Bank / OIT (ILOSTAT modelado)
+    source_api: worldbank
+    wb_code: SL.TLF.CACT.FM.ZS
+    name:
+      es: Razón de participación en la fuerza laboral entre mujeres y hombres
+      pt: Razão de participação na força de trabalho entre mulheres e homens
+      en: Ratio of female to male labor force participation rate
+    short_name:
+      es: Paridad laboral mujer/hombre
+      pt: Paridade laboral mulher/homem
+      en: Female/male labor participation ratio
+    unit: "% (100 = paridad)"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.10
+    sdg_target: "ODS 5.5 / 8.5"
+    valid_range: [30.0, 105.0]
+    methodology_note: >
+      Ajuste ADR-001: Reemplaza a SL.TLF.CACT.FE.ZS (que mide solo la tasa femenina aislada, sin controlar por la tasa masculina del país).
+      El cociente mujer/hombre multiplicado por 100 mide directamente la brecha de género: 100 indica paridad completa y 68 indica que por cada 100 hombres activos participan 68 mujeres.
+
+  - code: SP.DYN.LE00.IN
+    dimension: social
+    source: World Bank / UN Population Division
+    source_api: worldbank
+    wb_code: SP.DYN.LE00.IN
+    name:
+      es: Esperanza de vida al nacer, total
+      pt: Esperança de vida ao nascer, total
+      en: Life expectancy at birth, total
+    short_name:
+      es: Esperanza de vida
+      pt: Esperança de vida
+      en: Life expectancy
+    unit: "años"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.05
+    sdg_target: "ODS 3.1"
+    valid_range: [50.0, 90.0]
+    methodology_note: >
+      Número de años que viviría un recién nacido si los patrones de mortalidad vigentes en el momento de su nacimiento se mantuvieran constantes.
+
+  # ==========================================
+  # DIMENSIÓN ECONÓMICA
+  # ==========================================
+  - code: NY.GDP.PCAP.PP.KD
+    dimension: economica
+    source: World Bank / Programa de Comparación Internacional (ICP)
+    source_api: worldbank
+    wb_code: NY.GDP.PCAP.PP.KD
+    name:
+      es: PIB per cápita, PPA ($ internacionales constantes de 2021)
+      pt: PIB per capita, PPC ($ internacionais constantes de 2021)
+      en: GDP per capita, PPP (constant 2021 international $)
+    short_name:
+      es: PIB per cápita (PPA cte.)
+      pt: PIB per capita (PPC cte.)
+      en: GDP per capita (PPP const.)
+    unit: "$ int. 2021"
+    decimals: 0
+    higher_is_better: true
+    composite_default_weight: 0.15
+    sdg_target: "ODS 8.1"
+    valid_range: [1500.0, 120000.0]
+    methodology_note: >
+      Producto interno bruto convertido a dólares internacionales utilizando las tasas de paridad del poder adquisitivo (PPA)
+      y expresado en precios constantes de 2021. Permite comparar crecimiento real libre de inflación y de tipo de cambio.
+
+  - code: SL.UEM.TOTL.ZS
+    dimension: economica
+    source: World Bank / OIT (ILOSTAT)
+    source_api: worldbank
+    wb_code: SL.UEM.TOTL.ZS
+    name:
+      es: Tasa de desempleo total (% de la fuerza laboral total, estimación modelada OIT)
+      pt: Taxa de desemprego total (% da força de trabalho total, estimativa OIT)
+      en: Unemployment, total (% of total labor force, modeled ILO estimate)
+    short_name:
+      es: Desempleo total
+      pt: Desemprego total
+      en: Total unemployment
+    unit: "%"
+    decimals: 1
+    higher_is_better: false
+    composite_default_weight: 0.08
+    sdg_target: "ODS 8.5"
+    valid_range: [0.5, 35.0]
+    methodology_note: >
+      Proporción de la población económicamente activa que no tiene trabajo pero está disponible y buscando empleo.
+
+  - code: FP.CPI.TOTL.ZG
+    dimension: economica
+    source: World Bank / FMI International Financial Statistics
+    source_api: worldbank
+    wb_code: FP.CPI.TOTL.ZG
+    name:
+      es: Inflación anual, precios al consumidor
+      pt: Inflação anual, preços ao consumidor
+      en: Inflation, consumer prices (annual %)
+    short_name:
+      es: Inflación anual (IPC)
+      pt: Inflação anual (IPC)
+      en: Annual inflation (CPI)
+    unit: "% anual"
+    decimals: 1
+    higher_is_better: false
+    composite_default_weight: 0.04
+    sdg_target: "ODS 8.2"
+    valid_range: [-10.0, 500.0]
+    methodology_note: >
+      Variación porcentual anual en el costo para el consumidor medio de adquirir una canasta de bienes y servicios.
+
+  - code: NE.GDI.TOTL.ZS
+    dimension: economica
+    source: World Bank / Cuentas Nacionales OCDE-CEPAL
+    source_api: worldbank
+    wb_code: NE.GDI.TOTL.ZS
+    name:
+      es: Formación bruta de capital (% del PIB)
+      pt: Formação bruta de capital (% do PIB)
+      en: Gross capital formation (% of GDP)
+    short_name:
+      es: Inversión / Formación de capital
+      pt: Investimento / Formação de capital
+      en: Gross capital formation
+    unit: "% del PIB"
+    decimals: 1
+    higher_is_better: true
+    composite_default_weight: 0.05
+    sdg_target: "ODS 8.2 / 9.1"
+    valid_range: [5.0, 50.0]
+    methodology_note: >
+      Desembolsos en adiciones a los activos fijos de la economía más las variaciones netas en el nivel de los inventarios.

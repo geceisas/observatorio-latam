@@ -1,0 +1,131 @@
+# Diccionario oficial de países y agregados regionales del Observatorio LATAM
+# Regla visual: Cada país prioritario tiene un color fijo verificado para daltonismo (paleta Okabe-Ito adaptada).
+# El promedio regional va en gris punteado (#64748B) y el resto de los 20 países de la región en gris claro (#CBD5E1).
+
+priority_countries:
+  - iso3: COL
+    iso2: CO
+    cepal_id: "216"
+    name:
+      es: Colombia
+      pt: Colômbia
+      en: Colombia
+    subregion: Sudamérica
+    income_group: Ingreso mediano alto
+    priority: true
+    color: "#0072B2" # Azul profundo (Okabe-Ito)
+    highlight_order: 1
+
+  - iso3: CHL
+    iso2: CL
+    cepal_id: "215"
+    name:
+      es: Chile
+      pt: Chile
+      en: Chile
+    subregion: Sudamérica
+    income_group: Ingreso alto
+    priority: true
+    color: "#D55E00" # Bermellón (Okabe-Ito)
+    highlight_order: 2
+
+  - iso3: CRI
+    iso2: CR
+    cepal_id: "217"
+    name:
+      es: Costa Rica
+      pt: Costa Rica
+      en: Costa Rica
+    subregion: Centroamérica
+    income_group: Ingreso mediano alto
+    priority: true
+    color: "#009E73" # Verde bosque azulado (Okabe-Ito)
+    highlight_order: 3
+
+  - iso3: BRA
+    iso2: BR
+    cepal_id: "214"
+    name:
+      es: Brasil
+      pt: Brasil
+      en: Brazil
+    subregion: Sudamérica
+    income_group: Ingreso mediano alto
+    priority: true
+    color: "#E69F00" # Ámbar dorado (Okabe-Ito)
+    highlight_order: 4
+
+  - iso3: MEX
+    iso2: MX
+    cepal_id: "233"
+    name:
+      es: México
+      pt: México
+      en: Mexico
+    subregion: Norte y Centroamérica
+    income_group: Ingreso mediano alto
+    priority: true
+    color: "#CC79A7" # Púrpura rojizo (Okabe-Ito)
+    highlight_order: 5
+
+region_countries:
+  - { iso3: ARG, iso2: AR, cepal_id: "204", name: { es: Argentina, pt: Argentina, en: Argentina }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: PER, iso2: PE, cepal_id: "238", name: { es: Perú, pt: Peru, en: Peru }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: URY, iso2: UY, cepal_id: "248", name: { es: Uruguay, pt: Uruguai, en: Uruguay }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: ECU, iso2: EC, cepal_id: "221", name: { es: Ecuador, pt: Equador, en: Ecuador }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: PAN, iso2: PA, cepal_id: "236", name: { es: Panamá, pt: Panamá, en: Panama }, subregion: Centroamérica, priority: false, color: "#94A3B8" }
+  - { iso3: DOM, iso2: DO, cepal_id: "220", name: { es: República Dominicana, pt: República Dominicana, en: Dominican Republic }, subregion: Caribe, priority: false, color: "#94A3B8" }
+  - { iso3: BOL, iso2: BO, cepal_id: "212", name: { es: Bolivia, pt: Bolívia, en: Bolivia }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: PRY, iso2: PY, cepal_id: "237", name: { es: Paraguay, pt: Paraguai, en: Paraguay }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: GTM, iso2: GT, cepal_id: "224", name: { es: Guatemala, pt: Guatemala, en: Guatemala }, subregion: Centroamérica, priority: false, color: "#94A3B8" }
+  - { iso3: HND, iso2: HN, cepal_id: "226", name: { es: Honduras, pt: Honduras, en: Honduras }, subregion: Centroamérica, priority: false, color: "#94A3B8" }
+  - { iso3: SLV, iso2: SV, cepal_id: "222", name: { es: El Salvador, pt: El Salvador, en: El Salvador }, subregion: Centroamérica, priority: false, color: "#94A3B8" }
+  - { iso3: NIC, iso2: NI, cepal_id: "235", name: { es: Nicaragua, pt: Nicarágua, en: Nicaragua }, subregion: Centroamérica, priority: false, color: "#94A3B8" }
+  - { iso3: VEN, iso2: VE, cepal_id: "249", name: { es: Venezuela, pt: Venezuela, en: Venezuela }, subregion: Sudamérica, priority: false, color: "#94A3B8" }
+  - { iso3: CUB, iso2: CU, cepal_id: "218", name: { es: Cuba, pt: Cuba, en: Cuba }, subregion: Caribe, priority: false, color: "#94A3B8" }
+  - { iso3: HTI, iso2: HT, cepal_id: "225", name: { es: Haití, pt: Haiti, en: Haiti }, subregion: Caribe, priority: false, color: "#94A3B8" }
+
+aggregates:
+  - iso3: LATAM_AVG
+    iso2: LA
+    name:
+      es: Promedio simple LATAM (con n países)
+      pt: Média simples LATAM (com n países)
+      en: LATAM Simple Average (with n countries)
+    is_aggregate: true
+    line_style: dashed
+    color: "#475569"
+    description: "Promedio aritmético propio calculado sobre los 20 países latinoamericanos del catálogo, reportando explícitamente cuántos países (n) tenían dato en cada año."
+
+  - iso3: LCN
+    iso2: ZJ
+    name:
+      es: América Latina y el Caribe (Banco Mundial LCN)
+      pt: América Latina e Caribe (Banco Mundial LCN)
+      en: Latin America & Caribbean (World Bank LCN)
+    is_aggregate: true
+    line_style: dotted
+    color: "#64748B"
+    description: "Agregado oficial ponderado del Banco Mundial para América Latina y el Caribe (fuertemente influido por la escala demográfica y económica de Brasil y México)."
+
+  - iso3: OED
+    iso2: OE
+    name:
+      es: Miembros OCDE (OED)
+      pt: Membros OCDE (OED)
+      en: OECD Members (OED)
+    is_aggregate: true
+    line_style: dotted
+    color: "#6366F1"
+    description: "Agregado oficial del Banco Mundial para los países miembros de la OCDE."
+
+  - iso3: WLD
+    iso2: 1W
+    name:
+      es: Mundo (WLD)
+      pt: Mundo (WLD)
+      en: World (WLD)
+    is_aggregate: true
+    line_style: dotted
+    color: "#94A3B8"
+    description: "Agregado global del Banco Mundial."

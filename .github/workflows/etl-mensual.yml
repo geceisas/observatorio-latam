@@ -1,0 +1,38 @@
+name: ETL Mensual - Snapshot Versionado (ADR-001)
+
+on:
+  schedule:
+    # Corre el día 1 de cada mes a las 06:00 UTC
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+jobs:
+  build-snapshot:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ETL dependencies
+        run: pip install pyyaml requests
+
+      - name: Run ETL (Download World Bank + CEPALSTAT, Transform, Validate & Insights)
+        run: python etl/run_etl.py
+
+      - name: Run 40 Chat Regression Evals against new Snapshot
+        run: python evals/run_evals.py
+
+      - name: Commit & Push Versioned Snapshot if Validated
+        run: |
+          git config user.name "observatorio-latam-bot"
+          git config user.email "bot@observatorio-latam.org"
+          git add data/
+          git diff --staged --quiet || (git commit -m "chore(data): actualización mensual de snapshot $(date +%Y-%m)" && git push)

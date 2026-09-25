@@ -1,0 +1,19 @@
+name: Evaluaciones Automáticas del Chat (40 Preguntas · ADR-003)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  evals-and-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: pip install pyyaml requests
+      - name: Verify Snapshot Integrity & Run 40 Regression Questions
+        run: python evals/run_evals.py

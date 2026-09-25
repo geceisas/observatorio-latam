@@ -1,0 +1,47 @@
+# Suite de 40 Preguntas de Evaluación Automática para el Chat del Observatorio LATAM (ADR-003)
+# Cada caso verifica:
+# 1. Que la herramienta seleccione el indicador correcto (incluyendo reemplazos metodológicos de ADR-001)
+# 2. Que el verificador numérico apruebe al 100% (`unverified_count == 0`)
+# 3. Que las preguntas fuera de catálogo sean rechazadas sin inventar cifras.
+
+eval_cases:
+  - { id: Q01, question: "¿Cuánto emite de CO2 per cápita Colombia y cómo se compara con el promedio regional?", expected_indicator: "EN.GHG.CO2.PC.CE.AR5", expect_verified: true }
+  - { id: Q02, question: "¿Qué pasó con el indicador EN.ATM.CO2E.PC en Chile y Costa Rica?", expected_indicator: "EN.GHG.CO2.PC.CE.AR5", expect_verified: true }
+  - { id: Q03, question: "¿Cómo evolucionó la generación de electricidad renovable en Chile desde 2010?", expected_indicator: "EG.ELC.RNEW.ZS", expect_verified: true }
+  - { id: Q04, question: "¿Logró Costa Rica recuperar su superficie forestal entre 2010 y 2024?", expected_indicator: "AG.LND.FRST.ZS", expect_verified: true }
+  - { id: Q05, question: "¿Cuál es la participación de energías renovables en el consumo final en Brasil y Uruguay?", expected_indicator: "EG.FEC.RNEW.ZS", expect_verified: true }
+  - { id: Q06, question: "Compara la pobreza entre Colombia, Chile y Brasil con metodología comparable", expected_indicator: "CEPAL.POV.HARM", expect_verified: true }
+  - { id: Q07, question: "¿Por qué no se puede usar SI.POV.NAHC para comparar la pobreza entre Colombia y México?", expected_indicator: "CEPAL.POV.HARM", expect_verified: true }
+  - { id: Q08, question: "¿Cuál es la pobreza según la línea nacional propia del DANE en Colombia?", expected_indicator: "SI.POV.NAHC", expect_verified: true }
+  - { id: Q09, question: "¿Cómo ha cambiado el coeficiente de Gini en Chile y Colombia desde 2010?", expected_indicator: "SI.POV.GINI", expect_verified: true }
+  - { id: Q10, question: "¿Qué país tiene menor desigualdad según el índice de Gini en América Latina?", expected_indicator: "SI.POV.GINI", expect_verified: true }
+  - { id: Q11, question: "¿Cuánto invierte Chile y Costa Rica en gasto en salud per cápita en paridad de poder adquisitivo?", expected_indicator: "SH.XPD.CHEX.PP.CD", expect_verified: true }
+  - { id: Q12, question: "¿Cuál es la tasa neta de matrícula secundaria en Colombia, México y Brasil?", expected_indicator: "SE.SEC.NENR", expect_verified: true }
+  - { id: Q13, question: "¿Qué tan grande es la brecha laboral de género mujer/hombre en Colombia frente a la región?", expected_indicator: "SL.TLF.CACT.FM.ZS", expect_verified: true }
+  - { id: Q14, question: "Compara la paridad laboral mujer/hombre entre México, Costa Rica y Chile", expected_indicator: "SL.TLF.CACT.FM.ZS", expect_verified: true }
+  - { id: Q15, question: "¿Cuál es la esperanza de vida al nacer en Costa Rica y Chile frente al promedio LATAM?", expected_indicator: "SP.DYN.LE00.IN", expect_verified: true }
+  - { id: Q16, question: "¿Cómo creció el PIB per cápita PPA en Costa Rica, Chile y Colombia desde 2010?", expected_indicator: "NY.GDP.PCAP.PP.KD", expect_verified: true }
+  - { id: Q17, question: "¿Quién lidera el ranking de PIB per cápita PPA en América Latina?", expected_indicator: "NY.GDP.PCAP.PP.KD", expect_verified: true }
+  - { id: Q18, question: "¿Cuál es la tasa de desempleo total en Colombia, Brasil y México?", expected_indicator: "SL.UEM.TOTL.ZS", expect_verified: true }
+  - { id: Q19, question: "¿Cómo se comportó la inflación anual IPC en Costa Rica, Colombia y Argentina?", expected_indicator: "FP.CPI.TOTL.ZG", expect_verified: true }
+  - { id: Q20, question: "¿Qué porcentaje del PIB representa la formación bruta de capital en México y Chile?", expected_indicator: "NE.GDI.TOTL.ZS", expect_verified: true }
+  - { id: Q21, question: "¿Hubo desacoplamiento entre PIB per cápita y emisiones de CO2 en Costa Rica?", expected_indicator: "NY.GDP.PCAP.PP.KD", expect_verified: true }
+  - { id: Q22, question: "¿Cómo pesa Brasil en las emisiones de CO2 frente al promedio simple LATAM?", expected_indicator: "EN.GHG.CO2.PC.CE.AR5", expect_verified: true }
+  - { id: Q23, question: "¿En qué puesto del ranking de electricidad renovable está Costa Rica?", expected_indicator: "EG.ELC.RNEW.ZS", expect_verified: true }
+  - { id: Q24, question: "¿Cuál es la cobertura forestal de Brasil y Perú en el último año?", expected_indicator: "AG.LND.FRST.ZS", expect_verified: true }
+  - { id: Q25, question: "¿Cuál es el gasto en salud per cápita PPA de Colombia frente al promedio regional?", expected_indicator: "SH.XPD.CHEX.PP.CD", expect_verified: true }
+  - { id: Q26, question: "¿Qué posición ocupa México en matrícula neta secundaria?", expected_indicator: "SE.SEC.NENR", expect_verified: true }
+  - { id: Q27, question: "¿Cuál es la desigualdad Gini de Brasil frente al promedio simple de la región?", expected_indicator: "SI.POV.GINI", expect_verified: true }
+  - { id: Q28, question: "Compara la pobreza armonizada de CEPAL entre Costa Rica y República Dominicana", expected_indicator: "CEPAL.POV.HARM", expect_verified: true }
+  - { id: Q29, question: "¿Cómo evolucionó el desempleo en Chile y Uruguay entre 2010 y 2024?", expected_indicator: "SL.UEM.TOTL.ZS", expect_verified: true }
+  - { id: Q30, question: "¿Cuál es el PIB per cápita PPA de Brasil y México en 2024?", expected_indicator: "NY.GDP.PCAP.PP.KD", expect_verified: true }
+  - { id: Q31, question: "¿Qué país tiene mayor esperanza de vida en la región?", expected_indicator: "SP.DYN.LE00.IN", expect_verified: true }
+  - { id: Q32, question: "¿Cómo cambió la razón de participación laboral mujer/hombre en Chile?", expected_indicator: "SL.TLF.CACT.FM.ZS", expect_verified: true }
+  - { id: Q33, question: "¿Cuántas toneladas de CO2 per cápita emite México frente a la región?", expected_indicator: "EN.GHG.CO2.PC.CE.AR5", expect_verified: true }
+  - { id: Q34, question: "¿Cuál es la tasa de inversión o formación de capital en Colombia y Panamá?", expected_indicator: "NE.GDI.TOTL.ZS", expect_verified: true }
+  - { id: Q35, question: "¿Cómo evolucionó la energía renovable en el consumo final en Colombia y Chile?", expected_indicator: "EG.FEC.RNEW.ZS", expect_verified: true }
+  - { id: Q36, question: "¿Cuál es la inflación anual en Brasil y Perú en el último corte?", expected_indicator: "FP.CPI.TOTL.ZG", expect_verified: true }
+  - { id: Q37, question: "¿Cuál fue el precio de Bitcoin en Colombia en 2024?", expect_out_of_catalog: true, expect_verified: true }
+  - { id: Q38, question: "¿Cuántos mundiales de fútbol ha ganado Brasil?", expect_out_of_catalog: true, expect_verified: true }
+  - { id: Q39, question: "¿Cuáles son las reservas probadas de litio en Chile hoy?", expect_out_of_catalog: true, expect_verified: true }
+  - { id: Q40, question: "¿Cuál fue el flujo de remesas familiares mensuales en México?", expect_out_of_catalog: true, expect_verified: true }
